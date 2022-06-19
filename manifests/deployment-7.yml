@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "akssmachew-b8b0"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "akssmachew-b8b0"
+  template:
+    metadata:
+      labels:
+        app: "akssmachew-b8b0"
+    spec:
+      containers:
+        - name: "akssmachew-b8b0"
+          image: "acrsmachew.azurecr.io/akssmachew"
+          ports:
+          - containerPort: 80
